@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPERHERO QUIZ</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="fullbg">
+    <div class="c1">
+
+        <h1>THE SUPERHERO QUIZ</h1>
+        <p class="score">Your Score is 0/0</p>
+        <button onclick="quitquiz()">Quit</button>
+    </div>
+
+</body>
+<script>
+    const quitquiz = ()=>{
+        localStorage.clear();
+        window.location.href="index.html";
+    }
+
+    document.querySelector("p").innerHTML = "You Score is "+ localStorage.getItem("finalscore");
+</script>
+
+</html>

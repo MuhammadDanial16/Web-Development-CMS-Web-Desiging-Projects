@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Muhammad Danial Rajpoot</h1>
+        <nav>
+            <a href="#profile">Profile</a>
+            <a href="#academic-background">Academic Background</a>
+            <a href="#cv-viewer">CV Viewer</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button id="themeSwitcher">🔆</button>
+    </header>
+
+    <section id="profile">
+        <h2>Personal Profile</h2>
+        <img src="C:\Users\HC\Desktop\Danial Web Work\Danial Project ICT Software\Dani pics\WhatsApp Image 2025-03-16 at 3.02.10 PM.jpeg">
+        <p>Name: Muhammad Danial.</p>
+        <p>Etea ID: 71579.</p>
+        <p>Location: Haripur, KPK.</p>
+        <pre>My name is Muhammad Danial. I belong to district Haripur of KPK. I am studying at the University Of Engineering And Technology Abbottabad Campus in the Software Department.<br>I am very passionate about learning coding and want to achieve my goals. I am not a great programmer but just a good programmer with great habits.</pre>
+    </section>
+
+    <section id="academic-background">
+        <h2>Academic Background</h2>
+        <div class="table-container">
+            <table id="academicTable">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Institution</th>
+                        <th>Degree</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2022</td>
+                        <td>Hazara Public School</td>
+                        <td>Matric</td>
+                    </tr>
+                    <tr>
+                        <td>2024</td>
+                        <td>Hazara Public College</td>
+                        <td>Fsc</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+
+    <section id="cv-viewer">
+        <h2>Interactive CV Viewer</h2>
+        <!-- Button to show CV -->
+        <button id="cvLink">View My CV</button>
+
+        <!-- Container for the CV iframe, initially hidden -->
+        <div id="cvContainer" style="display:none;">
+            <iframe src="C:\Users\HC\Desktop\Danial Web Work\Danial Project ICT Software\Embedded CV.pdf" width="100%" height="600px" style="border: none;"></iframe>
+        </div>
+
+        <!-- Button to download CV -->
+        <a href="C:\Users\HC\Desktop\Danial Web Work\Danial Project ICT Software\Embedded CV.pdf" download class="download-button">Download CV</a>
+    </section>
+
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+            // Ensure the DOM is fully loaded before attaching event listeners
+
+            document.getElementById("cvLink").addEventListener("click", function () {
+                // Get the cvContainer element
+                var cvContainer = document.getElementById("cvContainer");
+
+                // Toggle the display of the cvContainer
+                if (cvContainer.style.display === "none") {
+                    cvContainer.style.display = "block"; // Show the iframe
+                } else {
+                    cvContainer.style.display = "none"; // Hide the iframe
+                }
+            });
+        });</script>
+
+
+    <section>
+        <h1>Picture Gallery</h1>
+        <div class="container">
+            <div class="card">
+                <img src="C:\Users\HC\Desktop\Danial Web Work\Danial Project ICT Software\Dani pics\WhatsApp Image 2025-03-16 at 3.03.37 PM.jpeg">
+                <div class="card__head">Group AA</div>
+            </div>
+            <div class="card">
+                <img src="C:\Users\HC\Desktop\Danial Web Work\Danial Project ICT Software\Dani pics\WhatsApp Image 2025-03-16 at 3.02.58 PM.jpeg">
+                <div class="card__head">Group AA</div>
+            </div>
+            <div class="card">
+                <img src="C:\Users\HC\Desktop\Danial Web Work\Danial Project ICT Software\Dani pics\WhatsApp Image 2025-03-16 at 3.29.38 PM.jpeg">
+                <div class="card__head">Group AA</div>
+            </div>
+            <div class="card">
+                <img src="C:\Users\HC\Desktop\Danial Web Work\Danial Project ICT Software\Dani pics\WhatsApp Image 2025-03-16 at 3.00.26 PM.jpeg">
+                <div class="card__head">Group AA</div>
+            </div>
+            <div class="card">
+                <img src="C:\Users\HC\Desktop\Danial Web Work\Danial Project ICT Software\Dani pics\WhatsApp Image 2025-03-16 at 3.00.21 PM.jpeg">
+                <div class="card__head">Group AA</div>
+            </div>
+        </div>
+    </section>
+
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="post">
+        <input type="hidden" name="access_key" value="b2c1d5ce-ed05-44fc-9e14-61391cd0a11e">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <br>
+        <br>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <br>
+        <br>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <br>
+        <button class="sendbutton" type="submit">Send</button>
+    </form>
+
+    <script src="script.js"></script>
+
+
+
+
+
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <script>
+        // Function that updates the progress bar width on scroll
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%"; // Set the width of the progress bar based on scroll percentage
+        }
+    </script>
+
+
+</body>
+</html>

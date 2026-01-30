@@ -1,0 +1,336 @@
+/* VS CODE OF MASHAAL SAEED*/
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Light mode background */
+    color: #333; /* Light mode text color */
+}
+
+img {
+  object-fit: cover;
+  width: 230px;
+  height: 230px;
+}
+
+pre {
+    font-size: 15px;
+    font-family: poppins;
+}
+
+/* Header Styles */
+header {
+    display: flex; /* Use Flexbox for the header */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    background: #007bff; /* Header background color */
+    color: white; /* Header text color */
+    padding: 0px 70px; /* Padding for header */
+}
+
+header button {
+    position: absolute; /* Positioning the button */
+    right: 20px; /* Distance from the right */
+    top: 25px; /* Distance from the top */
+    padding: 8px 8px; /* Padding for button */
+    border: none; /* Remove default border */
+    border-radius: 50%; /* Make the button round */
+    background-color: #5eacff; /* Background color */
+    color: #007bff; /* Text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header button:hover {
+    background-color: #c4e0ff; /* Change background on hover */
+}
+
+/* Navigation Styles */
+nav {
+    display: flex; /* Use Flexbox for alignment */
+    justify-content: center; /* Center the nav items horizontally */
+    align-items: center; /* Center the nav items vertically */
+}
+
+nav a {
+    margin: 0 15px; /* Space between items */
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    padding: 10px 15px; /* Padding for better click area */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+nav a:hover {
+    background-color: #b8d8fd; /* Light background on hover */
+}
+
+/* Section Styles */
+section {
+    margin: 20px;
+    padding: 20px;
+    background: white; /* Light mode background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+.dark-mode header {
+    background: #1f1f1f; /* Darker header background */
+}
+
+.dark-mode nav a {
+    color: #b8d8fd; /* Light color for nav links */
+}
+
+.dark-mode section {
+    background: #1e1e1e; /* Darker background for sections */
+    color: #e0e0e0; /* Light text color for sections */
+}
+
+.dark-mode table {
+    background: #1e1e1e; /* Darker background for tables */
+    color: #e0e0e0; /* Light text color for table */
+}
+
+.dark-mode th {
+    background-color: #007bff; /* Keep header color for tables */
+    color: white; /* Ensure header text is visible */
+}
+
+.dark-mode td {
+    color: #e0e0e0; /* Ensure table cell text is visible */
+}
+
+.dark-mode button {
+    background-color: #5eacff; /* Button color in dark mode */
+    color: #007bff; /* Button text color */
+}
+
+.dark-mode .download-button {
+    background-color: #007bff; /* Button color for download */
+    color: white; /* Button text color */
+}
+
+td {
+    color: #ffffff;
+}
+
+/* Input and Button Styles */
+input, textarea {
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    border: none;
+    background-color: #ebebeb; /* Light background for inputs */
+}
+
+input:focus, textarea:focus {
+    outline: none; /* Remove outline on focus */
+    border: 1px solid #007bff; /* Add border on focus */
+}
+
+.sendbutton {
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    vertical-align: middle;
+    border: none; /* Remove default border */
+    background-color: #ebebeb; /* Light background for button */
+}
+
+.sendbutton:hover {
+    background-color: #b3b3b3; /* Darker background on hover */
+}
+
+/* Table Styles */
+.table-container {
+    overflow-x: auto; /* Allow horizontal scrolling on small screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px; /* Space between heading and table */
+}
+
+th, td {
+    border: 1px solid #ffffff;
+    padding: 12px; /* Increased padding for better spacing */
+    background-color: #121212;
+    text-align: left; /* Align text to the left */
+}
+
+th {
+    background-color: #007bff; /* Header background color */
+    color: white; /* Header text color */
+    font-weight: bold; /* Bold text for headers */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping for even rows */
+}
+
+button {
+    cursor: pointer; /* Pointer cursor for buttons */
+}
+
+  /* Picture Gallery */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10vmin;
+    overflow: hidden;
+    transform: skew(5deg);
+    
+  
+    .card {
+      flex: 1;
+      transition: all 1s ease-in-out;
+      height: 75vmin;
+      position: relative;
+    
+      .card__head {
+        color: black;
+        background: rgba(255, 30, 173, 0.75);
+        padding: 0.5em;
+        transform: rotate(-90deg);
+        transform-origin: 0% 0%;
+        transition: all 0.5s ease-in-out;
+        min-width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 1em;
+        white-space: nowrap;
+      }
+  
+      &:hover {
+        flex-grow: 10;
+        img {
+          filter: grayscale(0);
+        }
+        .card__head {
+          text-align: center;
+          top: calc(100% - 2em);
+          color: white;
+          background: rgba(0, 0, 0, 0.5);
+          font-size: 2em;
+          transform: rotate(0deg) skew(-5deg);
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 1s ease-in-out;
+        filter: grayscale(100%);
+      }
+      &:not(:nth-child(5)) {
+        margin-right: 1em;
+      }
+    }
+  }
+
+
+
+
+
+
+#cv-viewer {
+    text-align: center;
+    padding: 20px;
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+    .download-button:hover {
+        background-color: #45a049;
+        cursor: pointer;
+    }
+
+button {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #007bb5;
+    }
+
+
+
+
+
+/* Style for the progress tracker */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc; /* Light grey background for the progress bar */
+    position: fixed; /* Keep it fixed at the top */
+    top: 0;
+    left: 0;
+    z-index: 999; /* Ensure it stays on top */
+}
+
+.progress-bar {
+    height: 8px;
+    background: #04AA6D; /* Green color for the progress line */
+    width: 0%; /* Initial width is 0 */
+}
+
+
+/* Container for the progress bar */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ddd; /* Light grey background for the bar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it's always visible above other content */
+}
+
+/* The actual progress bar */
+.progress-bar {
+    height: 8px;
+    background: #04AA6D; /* Green color for the progress */
+    width: 0%; /* Starts with 0 width */
+}
+
+
+
+
+
+
+
+
+
